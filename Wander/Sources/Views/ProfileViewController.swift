@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController {
 
     private let moodChartContainer = UIView()
     private let moodChartTitle = UILabel()
+    private let chartView = UIView()
 
     private let achievementsContainer = UIView()
     private let achievementsTitle = UILabel()
@@ -106,7 +107,6 @@ class ProfileViewController: UIViewController {
         moodChartTitle.translatesAutoresizingMaskIntoConstraints = false
         moodChartContainer.addSubview(moodChartTitle)
 
-        let chartView = UIView()
         chartView.backgroundColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.2)
         chartView.layer.cornerRadius = 8
         chartView.translatesAutoresizingMaskIntoConstraints = false
