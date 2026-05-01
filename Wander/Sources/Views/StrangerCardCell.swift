@@ -24,25 +24,25 @@ class StrangerCardCell: UICollectionViewCell {
     }
 
     private func setupUI() {
-        containerView.backgroundColor = UIColor(hex: "#1A2D42")?.withAlphaComponent(0.8)
+        containerView.backgroundColor = (UIColor(hex: "#1A2D42") ?? .clear).withAlphaComponent(0.8)
         containerView.layer.cornerRadius = 20
         containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.3).cgColor
+        containerView.layer.borderColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.3).cgColor
         containerView.clipsToBounds = true
         containerView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(containerView)
 
-        glowView.backgroundColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.1)
+        glowView.backgroundColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.1)
         glowView.layer.cornerRadius = 40
         glowView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(glowView)
 
-        iconContainer.backgroundColor = UIColor(hex: "#0D1B2A")?.withAlphaComponent(0.6)
+        iconContainer.backgroundColor = (UIColor(hex: "#0D1B2A") ?? .clear).withAlphaComponent(0.6)
         iconContainer.layer.cornerRadius = 35
         iconContainer.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(iconContainer)
 
-        iconImageView.tintColor = UIColor(hex: "#F5A623")
+        iconImageView.tintColor 
         iconImageView.contentMode = .scaleAspectFit
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         iconContainer.addSubview(iconImageView)
@@ -54,23 +54,23 @@ class StrangerCardCell: UICollectionViewCell {
         containerView.addSubview(nameLabel)
 
         archetypeLabel.font = .systemFont(ofSize: 12, weight: .medium)
-        archetypeLabel.textColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.8)
+        archetypeLabel.textColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.8)
         archetypeLabel.textAlignment = .center
         archetypeLabel.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(archetypeLabel)
 
-        moodBadge.backgroundColor = UIColor(hex: "#8B7FD3")?.withAlphaComponent(0.2)
+        moodBadge.backgroundColor = (UIColor(hex: "#8B7FD3") ?? .clear).withAlphaComponent(0.2)
         moodBadge.layer.cornerRadius = 10
         moodBadge.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(moodBadge)
 
-        moodIcon.tintColor = UIColor(hex: "#8B7FD3")
+        moodIcon.tintColor 
         moodIcon.contentMode = .scaleAspectFit
         moodIcon.translatesAutoresizingMaskIntoConstraints = false
         moodBadge.addSubview(moodIcon)
 
         moodLabel.font = .systemFont(ofSize: 11, weight: .medium)
-        moodLabel.textColor = UIColor(hex: "#8B7FD3")
+        moodLabel.textColor 
         moodLabel.translatesAutoresizingMaskIntoConstraints = false
         moodBadge.addSubview(moodLabel)
 
@@ -126,13 +126,13 @@ class StrangerCardCell: UICollectionViewCell {
         iconImageView.image = UIImage(systemName: character.avatarSymbol)
         moodIcon.image = UIImage(systemName: character.moodIcon)
 
-        glowView.backgroundColor = UIColor(hex: character.glowColor)?.withAlphaComponent(0.15)
+        glowView.backgroundColor = (UIColor(hex: character.glowColor) ?? .clear).withAlphaComponent(0.15)
         glowView.layer.borderWidth = 1
-        glowView.layer.borderColor = UIColor(hex: character.glowColor)?.withAlphaComponent(0.3).cgColor
+        glowView.layer.borderColor = (UIColor(hex: character.glowColor) ?? .clear).withAlphaComponent(0.3).cgColor
 
-        moodBadge.backgroundColor = UIColor(hex: character.moodColor)?.withAlphaComponent(0.15)
+        moodBadge.backgroundColor = (UIColor(hex: character.moodColor) ?? .clear).withAlphaComponent(0.15)
         moodBadge.layer.borderWidth = 1
-        moodBadge.layer.borderColor = UIColor(hex: character.moodColor)?.withAlphaComponent(0.3).cgColor
+        moodBadge.layer.borderColor = (UIColor(hex: character.moodColor) ?? .clear).withAlphaComponent(0.3).cgColor
         moodIcon.tintColor = UIColor(hex: character.moodColor)
         moodLabel.textColor = UIColor(hex: character.moodColor)
     }

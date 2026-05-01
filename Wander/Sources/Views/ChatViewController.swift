@@ -29,9 +29,9 @@ class ChatViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor = UIColor(hex: "#0D1B2A")
+        view.backgroundColor 
 
-        headerView.backgroundColor = UIColor(hex: "#1A2D42")?.withAlphaComponent(0.9)
+        headerView.backgroundColor = (UIColor(hex: "#1A2D42") ?? .clear).withAlphaComponent(0.9)
         headerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(headerView)
 
@@ -43,7 +43,7 @@ class ChatViewController: UIViewController {
         headerView.addSubview(closeButton)
 
         avatarIcon.image = UIImage(systemName: character?.avatarSymbol ?? "questionmark")
-        avatarIcon.tintColor = UIColor(hex: "#F5A623")
+        avatarIcon.tintColor 
         avatarIcon.contentMode = .scaleAspectFit
         avatarIcon.translatesAutoresizingMaskIntoConstraints = false
         headerView.addSubview(avatarIcon)
@@ -56,7 +56,7 @@ class ChatViewController: UIViewController {
 
         moodLabel.text = (character?.mood.rawValue ?? "Unknown") + " · " + (character?.archetype.rawValue ?? "")
         moodLabel.font = .systemFont(ofSize: 12, weight: .medium)
-        moodLabel.textColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.8)
+        moodLabel.textColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.8)
         moodLabel.translatesAutoresizingMaskIntoConstraints = false
         headerView.addSubview(moodLabel)
 
@@ -68,7 +68,7 @@ class ChatViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(tableView)
 
-        inputContainer.backgroundColor = UIColor(hex: "#1A2D42")
+        inputContainer.backgroundColor 
         inputContainer.layer.cornerRadius = 25
         inputContainer.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(inputContainer)
@@ -81,7 +81,7 @@ class ChatViewController: UIViewController {
         inputContainer.addSubview(textField)
 
         sendButton.setImage(UIImage(systemName: "arrow.up.circle.fill"), for: .normal)
-        sendButton.tintColor = UIColor(hex: "#F5A623")
+        sendButton.tintColor 
         sendButton.translatesAutoresizingMaskIntoConstraints = false
         sendButton.addTarget(self, action: #selector(sendMessage), for: .touchUpInside)
         inputContainer.addSubview(sendButton)

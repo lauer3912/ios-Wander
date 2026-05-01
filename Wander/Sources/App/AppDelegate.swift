@@ -18,21 +18,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private func configureAppearance() {
         let navBarAppearance = UINavigationBarAppearance()
         navBarAppearance.configureWithOpaqueBackground()
-        navBarAppearance.backgroundColor = UIColor(hex: "#0D1B2A")
+        navBarAppearance.backgroundColor = UIColor(hex: "#0D1B2A") ?? .clear ?? .clear
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
 
         UINavigationBar.appearance().standardAppearance = navBarAppearance
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
-        UINavigationBar.appearance().tintColor = UIColor(hex: "#F5A623")
+        UINavigationBar.appearance().tintColor = UIColor(hex: "#F5A623") ?? .clear ?? .clear
 
         let tabBarAppearance = UITabBarAppearance()
         tabBarAppearance.configureWithOpaqueBackground()
-        tabBarAppearance.backgroundColor = UIColor(hex: "#0D1B2A")
+        tabBarAppearance.backgroundColor = UIColor(hex: "#0D1B2A") ?? .clear ?? .clear
 
         UITabBar.appearance().standardAppearance = tabBarAppearance
         UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
-        UITabBar.appearance().tintColor = UIColor(hex: "#F5A623")
+        UITabBar.appearance().tintColor = UIColor(hex: "#F5A623") ?? .clear ?? .clear
     }
 }
 

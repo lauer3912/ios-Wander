@@ -12,7 +12,7 @@ class JournalViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor = UIColor(hex: "#0D1B2A")
+        view.backgroundColor 
         navigationController?.navigationBar.isHidden = true
 
         titleLabel.text = "Journal"
@@ -22,8 +22,8 @@ class JournalViewController: UIViewController {
         view.addSubview(titleLabel)
 
         segmentedControl.selectedSegmentIndex = 0
-        segmentedControl.backgroundColor = UIColor(hex: "#1A2D42")
-        segmentedControl.selectedSegmentTintColor = UIColor(hex: "#F5A623")
+        segmentedControl.backgroundColor 
+        segmentedControl.selectedSegmentTintColor 
         segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor.white], for: .normal)
         segmentedControl.setTitleTextAttributes([.foregroundColor: UIColor(hex: "#0D1B2A") ?? .black], for: .selected)
         segmentedControl.translatesAutoresizingMaskIntoConstraints = false
@@ -102,7 +102,7 @@ class JournalEntryCell: UITableViewCell {
         backgroundColor = .clear
         selectionStyle = .none
 
-        containerView.backgroundColor = UIColor(hex: "#1A2D42")?.withAlphaComponent(0.6)
+        containerView.backgroundColor = (UIColor(hex: "#1A2D42") ?? .clear).withAlphaComponent(0.6)
         containerView.layer.cornerRadius = 14
         containerView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(containerView)
@@ -153,9 +153,9 @@ class JournalEntryCell: UITableViewCell {
         titleLabel.text = title
         dateLabel.text = date
         moodLabel.text = mood
-        moodBadge.backgroundColor = UIColor(hex: moodColorHex)?.withAlphaComponent(0.2)
+        moodBadge.backgroundColor = (UIColor(hex: moodColorHex) ?? .clear).withAlphaComponent(0.2)
         moodBadge.layer.borderWidth = 1
-        moodBadge.layer.borderColor = UIColor(hex: moodColorHex)?.withAlphaComponent(0.4).cgColor
-        moodLabel.textColor = UIColor(hex: moodColorHex)
+        moodBadge.layer.borderColor = (UIColor(hex: moodColorHex) ?? .clear).withAlphaComponent(0.4).cgColor
+        moodLabel.textColor = UIColor(hex: moodColorHex) ?? .clear
     }
 }

@@ -24,7 +24,7 @@ class ExploreViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor = UIColor(hex: "#0D1B2A")
+        view.backgroundColor 
         navigationController?.navigationBar.isHidden = true
 
         titleLabel.text = "Explore"
@@ -103,14 +103,14 @@ class ArchetypeCell: UICollectionViewCell {
     }
 
     private func setupUI() {
-        containerView.backgroundColor = UIColor(hex: "#1A2D42")?.withAlphaComponent(0.6)
+        containerView.backgroundColor = (UIColor(hex: "#1A2D42") ?? .clear).withAlphaComponent(0.6)
         containerView.layer.cornerRadius = 16
         containerView.layer.borderWidth = 1
-        containerView.layer.borderColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.2).cgColor
+        containerView.layer.borderColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.2).cgColor
         containerView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(containerView)
 
-        iconImageView.tintColor = UIColor(hex: "#F5A623")
+        iconImageView.tintColor 
         iconImageView.contentMode = .scaleAspectFit
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         containerView.addSubview(iconImageView)
@@ -173,7 +173,7 @@ class ArchetypeCell: UICollectionViewCell {
         ]
         descriptionLabel.text = descriptions[archetype]
 
-        let locked = [Archetype.gentleGiant, .midnightPhilosopher, .silentDreamer].contains(archetype)
+        let locked = [StrangerCharacter.Archetype.gentleGiant, .midnightPhilosopher, .silentDreamer].contains(archetype)
         lockIcon.isHidden = !locked
     }
 }

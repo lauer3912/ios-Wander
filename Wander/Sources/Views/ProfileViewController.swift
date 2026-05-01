@@ -41,7 +41,7 @@ class ProfileViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor = UIColor(hex: "#0D1B2A")
+        view.backgroundColor 
         navigationController?.navigationBar.isHidden = true
 
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -51,15 +51,15 @@ class ProfileViewController: UIViewController {
         scrollView.addSubview(contentView)
 
         // Avatar section
-        avatarView.backgroundColor = UIColor(hex: "#1A2D42")?.withAlphaComponent(0.8)
+        avatarView.backgroundColor = (UIColor(hex: "#1A2D42") ?? .clear).withAlphaComponent(0.8)
         avatarView.layer.cornerRadius = 50
         avatarView.layer.borderWidth = 2
-        avatarView.layer.borderColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.5).cgColor
+        avatarView.layer.borderColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.5).cgColor
         avatarView.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(avatarView)
 
         avatarIcon.image = UIImage(systemName: "person.circle.fill")
-        avatarIcon.tintColor = UIColor(hex: "#F5A623")
+        avatarIcon.tintColor 
         avatarIcon.contentMode = .scaleAspectFit
         avatarIcon.translatesAutoresizingMaskIntoConstraints = false
         avatarView.addSubview(avatarIcon)
@@ -71,16 +71,16 @@ class ProfileViewController: UIViewController {
         nicknameLabel.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(nicknameLabel)
 
-        levelBadge.backgroundColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.2)
+        levelBadge.backgroundColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.2)
         levelBadge.layer.cornerRadius = 12
         levelBadge.layer.borderWidth = 1
-        levelBadge.layer.borderColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.4).cgColor
+        levelBadge.layer.borderColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.4).cgColor
         levelBadge.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(levelBadge)
 
         levelLabel.text = "Level 12 · Explorer"
         levelLabel.font = .systemFont(ofSize: 13, weight: .semibold)
-        levelLabel.textColor = UIColor(hex: "#F5A623")
+        levelLabel.textColor 
         levelLabel.translatesAutoresizingMaskIntoConstraints = false
         levelBadge.addSubview(levelLabel)
 
@@ -95,7 +95,7 @@ class ProfileViewController: UIViewController {
         streakStat.configure(value: "7", label: "Day Streak", icon: "star.fill")
 
         // Mood chart
-        moodChartContainer.backgroundColor = UIColor(hex: "#1A2D42")?.withAlphaComponent(0.6)
+        moodChartContainer.backgroundColor = (UIColor(hex: "#1A2D42") ?? .clear).withAlphaComponent(0.6)
         moodChartContainer.layer.cornerRadius = 16
         moodChartContainer.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(moodChartContainer)
@@ -107,7 +107,7 @@ class ProfileViewController: UIViewController {
         moodChartContainer.addSubview(moodChartTitle)
 
         let chartView = UIView()
-        chartView.backgroundColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.2)
+        chartView.backgroundColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.2)
         chartView.layer.cornerRadius = 8
         chartView.translatesAutoresizingMaskIntoConstraints = false
         moodChartContainer.addSubview(chartView)
@@ -262,10 +262,10 @@ class StatView: UIView {
     }
 
     private func setupUI() {
-        backgroundColor = UIColor(hex: "#1A2D42")?.withAlphaComponent(0.6)
+        backgroundColor = (UIColor(hex: "#1A2D42") ?? .clear).withAlphaComponent(0.6)
         layer.cornerRadius = 12
 
-        iconView.tintColor = UIColor(hex: "#F5A623")
+        iconView.tintColor 
         iconView.contentMode = .scaleAspectFit
         iconView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(iconView)
@@ -321,14 +321,14 @@ class AchievementCell: UICollectionViewCell {
     }
 
     private func setupUI() {
-        container.backgroundColor = UIColor(hex: "#1A2D42")?.withAlphaComponent(0.6)
+        container.backgroundColor = (UIColor(hex: "#1A2D42") ?? .clear).withAlphaComponent(0.6)
         container.layer.cornerRadius = 12
         container.layer.borderWidth = 1
-        container.layer.borderColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.2).cgColor
+        container.layer.borderColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.2).cgColor
         container.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(container)
 
-        iconView.tintColor = UIColor(hex: "#F5A623")
+        iconView.tintColor 
         iconView.contentMode = .scaleAspectFit
         iconView.translatesAutoresizingMaskIntoConstraints = false
         container.addSubview(iconView)

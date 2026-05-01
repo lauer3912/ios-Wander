@@ -39,7 +39,7 @@ class ChatMessageCell: UITableViewCell {
         messageLabel.text = message.text
 
         if message.isFromUser {
-            bubbleView.backgroundColor = UIColor(hex: "#2D5A7B")
+            bubbleView.backgroundColor 
             bubbleView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMinYCorner]
             messageLabel.textColor = .white
 
@@ -51,7 +51,7 @@ class ChatMessageCell: UITableViewCell {
                 bubbleView.widthAnchor.constraint(lessThanOrEqualToConstant: 280)
             ])
         } else {
-            bubbleView.backgroundColor = UIColor(hex: "#F5A623")?.withAlphaComponent(0.15)
+            bubbleView.backgroundColor = (UIColor(hex: "#F5A623") ?? .clear).withAlphaComponent(0.15)
             bubbleView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner]
             messageLabel.textColor = .white
 

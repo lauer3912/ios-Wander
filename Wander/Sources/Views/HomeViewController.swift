@@ -29,12 +29,12 @@ class HomeViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor = UIColor(hex: "#0D1B2A")
+        view.backgroundColor 
         navigationController?.navigationBar.isHidden = true
 
         titleLabel.text = "Wander"
         titleLabel.font = .systemFont(ofSize: 36, weight: .bold)
-        titleLabel.textColor = UIColor(hex: "#F5A623")
+        titleLabel.textColor 
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(titleLabel)
@@ -56,8 +56,8 @@ class HomeViewController: UIViewController {
 
         meetButton.setTitle("Meet a New Stranger", for: .normal)
         meetButton.titleLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
-        meetButton.backgroundColor = UIColor(hex: "#F5A623")
-        meetButton.setTitleColor(UIColor(hex: "#0D1B2A"), for: .normal)
+        meetButton.backgroundColor 
+        meetButton.setTitleColor(UIColor(hex: "#0D1B2A") ?? .black, for: .normal)
         meetButton.layer.cornerRadius = 25
         meetButton.translatesAutoresizingMaskIntoConstraints = false
         meetButton.addTarget(self, action: #selector(meetNewStranger), for: .touchUpInside)

@@ -25,8 +25,8 @@ class MainTabBarController: UITabBarController {
     }
 
     private func setupAppearance() {
-        tabBar.backgroundColor = UIColor(hex: "#0D1B2A")
-        tabBar.tintColor = UIColor(hex: "#F5A623")
-        tabBar.unselectedItemTintColor = UIColor(hex: "#8B7FD3")?.withAlphaComponent(0.6)
+        tabBar.backgroundColor 
+        tabBar.tintColor 
+        tabBar.unselectedItemTintColor = (UIColor(hex: "#8B7FD3") ?? .clear).withAlphaComponent(0.6)
     }
 }
