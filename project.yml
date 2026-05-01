@@ -1,0 +1,88 @@
+name: Wander
+options:
+  bundleIdPrefix: com.ggsheng
+  deploymentTarget:
+    iOS: "16.0"
+  xcodeVersion: "15.0"
+  developmentLanguage: en
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: "9L6N2ZF26B"
+    CODE_SIGN_STYLE: Automatic
+    SWIFT_VERSION: "5.9"
+    IPHONEOS_DEPLOYMENT_TARGET: "16.0"
+    ENABLE_USER_SCRIPT_SANDBOXING: "NO"
+
+targets:
+  Wander:
+    type: application
+    platform: iOS
+    sources:
+      - path: Wander/Sources
+        type: group
+      - path: Wander/Resources
+        type: group
+    settings:
+      base:
+        INFOPLIST_FILE: Wander/Resources/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.ggsheng.Wander
+        CODE_SIGN_ENTITLEMENTS: Wander/Resources/Wander.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME: AccentColor
+        GENERATE_INFOPLIST_FILE: NO
+        CURRENT_PROJECT_VERSION: 1
+        MARKETING_VERSION: 1.0.0
+    entitlements:
+      path: Wander/Resources/Wander.entitlements
+    dependencies:
+      - target: WanderTests
+        embed: false
+      - target: WanderUITests
+        embed: false
+
+  WanderTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: WanderTests
+        type: group
+    settings:
+      base:
+        INFOPLIST_FILE: WanderTests/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.ggsheng.WanderTests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_HOST: "$(BUILT_PRODUCTS_DIR)/Wander.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Wander"
+        BUNDLE_LOADER: "$(TEST_HOST)"
+
+  WanderUITests:
+    type: bundle.ui-testing
+    platform: iOS
+    sources:
+      - path: WanderUITests
+        type: group
+    settings:
+      base:
+        INFOPLIST_FILE: WanderUITests/Info.plist
+        PRODUCT_BUNDLE_IDENTIFIER: com.ggsheng.WanderUITests
+        GENERATE_INFOPLIST_FILE: YES
+        TEST_TARGET_NAME: Wander
+
+schemes:
+  Wander:
+    build:
+      targets:
+        Wander: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - WanderTests
+        - WanderUITests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
