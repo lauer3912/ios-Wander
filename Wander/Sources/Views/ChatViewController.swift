@@ -38,6 +38,7 @@ class ChatViewController: UIViewController {
         let closeButton = UIButton(type: .system)
         closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
         closeButton.tintColor = .white
+        closeButton.accessibilityIdentifier = "closeChat"
         closeButton.translatesAutoresizingMaskIntoConstraints = false
         closeButton.addTarget(self, action: #selector(closeChat), for: .touchUpInside)
         headerView.addSubview(closeButton)

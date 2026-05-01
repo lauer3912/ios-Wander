@@ -45,6 +45,6 @@ final class WanderUITests: XCTestCase {
 
     func testNavigateToChat() {
         app.collectionViews.cells.firstMatch.tap()
-        XCTAssertTrue(app.buttons["xmark"].exists)
+        XCTAssertTrue(app.buttons["closeChat"].exists)
     }
 }
