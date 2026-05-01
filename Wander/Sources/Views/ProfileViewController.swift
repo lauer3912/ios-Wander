@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         achievementsCollectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        super.init(nibName: nibNameInBundle, bundle nibBundleInBundle)
+        super.init(nibName: nibNameInBundle, bundle: nibBundleInBundle)
     }
 
     required init?(coder: NSCoder) {

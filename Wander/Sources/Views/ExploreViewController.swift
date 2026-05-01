@@ -11,7 +11,7 @@ class ExploreViewController: UIViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        super.init(nibName: nibNameInBundle, bundle nibBundleInBundle)
+        super.init(nibName: nibNameInBundle, bundle: nibBundleInBundle)
     }
 
     required init?(coder: NSCoder) {
