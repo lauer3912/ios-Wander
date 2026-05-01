@@ -41,7 +41,7 @@ class ProfileViewController: UIViewController {
     }
 
     private func setupUI() {
-        view.backgroundColor 
+        view.backgroundColor = UIColor(hex: "#0D1B2A") ?? .clear
         navigationController?.navigationBar.isHidden = true
 
         scrollView.translatesAutoresizingMaskIntoConstraints = false
